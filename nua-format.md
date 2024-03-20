@@ -15,8 +15,8 @@ All values are hex numbers in the range 00-ff. The case is not relevant.
 Examples of pixelspecs:
 
 * 000000=Black
-* 05FFFF=white for .05s
-* 800080=50% blue for 1.28s
+* 05FFFFFF=white for .05s
+* 80000080=50% blue for 1.28s
 
 It is used to drive a single neopixel RGB led.
 
