@@ -49,13 +49,13 @@ void convert(uint32_t color, uint8_t * per8)
 			continue;	// If 0 nothing to set
 		switch (off) {
 		case 0:
-			per8[idx] |= 0b10000000;
+			per8[idx] |= 0b10000000; // Using the STOP bit as the 2nd
 			break;
 		case 1:
 			per8[idx] |= 0b00110000;
 			break;
 		case 2:
-			per8[idx] |= 0b00000110;
+			per8[idx] |= 0b00000100; // Using the START bit as the 1st
 			break;
 		default:
 			abort();	// Should never happen
