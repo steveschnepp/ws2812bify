@@ -23,10 +23,11 @@ int main()
 	// Write the local buffer
 	ssize_t bytes_written;
 	char *out_buffer = buffer;
-	while ((bytes_written = write(STDOUT_FILENO, buffer, buffer_len)) > 0) {
+	while ((bytes_written = write(STDOUT_FILENO, out_buffer, buffer_len)) > 0) {
 		out_buffer += bytes_written;
 		buffer_len -= bytes_written;
 	}
 
+	free(buffer);
 	return 0;
 }
